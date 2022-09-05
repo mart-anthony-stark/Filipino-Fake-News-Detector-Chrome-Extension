@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
   z-index: 99999;
   background: aliceblue;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding: 10px;
 }
@@ -35,7 +35,6 @@
   display: none;
 }
 .ffn-ext-content {
-  height: 100%;
   width: 100%;
 }
 .ffn-ext-text {
@@ -45,9 +44,108 @@
   resize: none;
 }
 .ffn-ext-header {
+  height: 60px;
   display: flex;
+  align-items: center;
   gap: 1rem;
+  margin-bottom: 10px;
 }
 .ffn-ext-header h1 {
-  font-size: 1.5rem !important;
+  font-size: 18px !important;
+  margin: 0 !important;
+}
+.ffn-ext-header img {
+  height: 40px;
+}
+.ffn-ext-details span {
+  font-size: 16px;
+}
+.ffn-ext-content textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+/* spinner */
+.ffn-ext-content .lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ffn-ext-content .lds-ripple div {
+  position: absolute;
+  border: 4px solid rgb(39, 87, 190);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.ffn-ext-content .lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+.ffn-ext-content .ffn-ext-spinner p {
+  text-align: center;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.ffn-ext-proba {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+  margin: 0;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+.ffn-ext-proba h4 {
+  margin: 0;
+}
+.ffn-ext-output {
+  text-align: center;
+  font-size: large;
+  font-weight: 800;
+}
+.ffn-ext-output.fake {
+  color: red !important;
+}
+.ffn-ext-output.real {
+  color: green !important;
 }
