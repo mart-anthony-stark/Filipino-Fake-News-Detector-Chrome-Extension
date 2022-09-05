@@ -1,0 +1,38 @@
+{
+  "name": "Filipino Fake News Classifier",
+  "description": "Classifies selected filipino news article if it is real or fake",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "icons": {
+      "16": "/images/16x16.png",
+      "32": "/images/32x32.png",
+      "48": "/images/48x48.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+          "16": "/images/16x16.png",
+          "32": "/images/32x32.png",
+          "48": "/images/48x48.png"
+      }
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css":["style.css"]
+    }
+  ],
+  "permissions": [
+      "storage",
+      "activeTab",
+      "scripting",
+      "tabs",
+      "contextMenus"
+  ],
+  "host_permissions": ["<all_urls>"]
+}
