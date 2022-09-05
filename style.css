@@ -1,0 +1,53 @@
+.ffn-ext-cont {
+  box-sizing: border-box;
+  max-height: 400px;
+  max-width: 400px;
+  height: 100%;
+  width: 100%;
+  margin: 0 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background: aliceblue;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 10px;
+}
+.ffn-ext-close {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(153, 47, 47);
+  font-size: large;
+  user-select: none;
+  cursor: pointer;
+  color: aliceblue;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+}
+.hidden {
+  display: none;
+}
+.ffn-ext-content {
+  height: 100%;
+  width: 100%;
+}
+.ffn-ext-text {
+  width: 100%;
+  height: 150px;
+  overflow: auto;
+  resize: none;
+}
+.ffn-ext-header {
+  display: flex;
+  gap: 1rem;
+}
+.ffn-ext-header h1 {
+  font-size: 1.5rem !important;
+}
