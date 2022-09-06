@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
 .ffn-ext-cont {
   box-sizing: border-box;
   max-height: 400px;
@@ -14,6 +16,7 @@
   box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding: 10px;
+  font-family: "Lato", sans-serif;
 }
 .ffn-ext-close {
   height: 35px;
@@ -129,9 +132,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   gap: 15px;
-  margin: 0;
+  margin: 0 auto;
   font-size: 15px;
   padding: 10px 20px;
 }
